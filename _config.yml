@@ -56,9 +56,9 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "First Lastname"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  name   : "Kevin Immanuel Gubbi"
+  avatar : "/assets/images/kgubbi.png"
+  bio    : "I'm Kevin Immanuel Gubbi, a Ph.D. candidate in Electrical and Computer Engineering at UC Davis, specializing in hardware security, VLSI design, and machine learning for EDA. My research focuses on LLM-assisted RTL verification, hardware fuzzing, and secure ASIC design. I've interned at AMD and Samsung Austin Research Center (SARC), where I worked on ML/RL-based optimization for chip design and filed a patent. I also lead award-winning research teams and contribute to hardware security initiatives."
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
