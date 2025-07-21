@@ -61,8 +61,8 @@ author:
   bio    : "I'm Kevin Immanuel Gubbi, a Ph.D. candidate in Electrical and Computer Engineering at UC Davis, specializing in hardware security, VLSI design, and machine learning for EDA. My research focuses on LLM-assisted RTL verification, hardware fuzzing, and secure ASIC design. I've interned at AMD and Samsung Austin Research Center (SARC), where I worked on ML/RL-based optimization for chip design and filed a patent. I also lead award-winning research teams and contribute to hardware security initiatives."
   links:
     - label: "LinkedIn"
-      icon: "fas fa-fw fa-linkedin"
-      url: "https://"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/kevingubbi/"
     - label: "Google Scholar"
       icon: "fab fa-fw fa-google-scholar"
       url: "https://scholar.google.com/citations?user=zAHMT24AAAAJ&hl=en"
@@ -77,16 +77,11 @@ footer:
   links:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/kevingubbi/"
+      url: "https://www.linkedin.com/"
     - label: "Google Scholar"
       icon: "fab fa-fw fa-google-scholar"
-      url: "https://twitter.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://scholar.google.com/citations?user=zAHMT24AAAAJ&hl=en"
+
 
 defaults:
   # _posts
