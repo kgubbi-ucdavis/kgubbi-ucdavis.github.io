@@ -15,15 +15,14 @@ tags:
 ---
 
 <style>
-p {
-  text-align: justify;
-}
-</style>
+  {
+  text-align: justify;}
+
 
 Voice interfaces are rapidly becoming the dominant method of interaction across a broad range of devices-from smart speakers and wearables to appliances and automotive systems. At the center of this transformation is Keyword Spotting (KWS), the task of detecting predefined wake words like “Hey Siri” or “OK Google” in continuous audio streams. Traditionally handled by cloud-based services or microcontrollers, keyword spotting is now migrating toward edge-based, hardware-accelerated implementations, offering major advantages in latency, power efficiency, and privacy.
 
 This post describes the design and tapeout of a CNN-based KWS accelerator ASIC, built entirely with open-source tools and submitted to the [Efabless AI-Generated Design Challenge](https://efabless.com/genai/challenges/4-winners). What distinguishes this project is the extensive use of Generative AI (ChatGPT-4o) in generating RTL, refining architectural decisions, and assisting with testbench development. The result is a modular, synthesizable KWS accelerator tailored for edge deployment-fully compatible with open-source ASIC toolchains such as OpenLane and SkyWater SKY130.
-
+</style>
 ## Keyword Spotting at the Edge
 
 Keyword spotting systems must operate in always-on, low-power modes while delivering high accuracy under variable acoustic environments. Cloud-based solutions introduce latency and privacy risks, while MCU-based implementations consume excessive energy for real-time wake-word detection.
