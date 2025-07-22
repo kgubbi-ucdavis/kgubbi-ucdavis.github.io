@@ -24,6 +24,11 @@ tags:
 --- -->
 
 
+<style>
+  {
+  text-align: justify;
+}
+</style>
 
 Voice interfaces are rapidly becoming the dominant method of interaction across a broad range of devices-from smart speakers and wearables to appliances and automotive systems. At the center of this transformation is Keyword Spotting (KWS), the task of detecting predefined wake words like “Hey Siri” or “OK Google” in continuous audio streams. Traditionally handled by cloud-based services or microcontrollers, keyword spotting is now migrating toward edge-based, hardware-accelerated implementations, offering major advantages in latency, power efficiency, and privacy.
 
