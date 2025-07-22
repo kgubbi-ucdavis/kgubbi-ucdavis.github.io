@@ -17,17 +17,17 @@ tags:
 <style>
   {
   text-align: justify;}
-
+</style>
 
 Voice interfaces are rapidly becoming the dominant method of interaction across a broad range of devices-from smart speakers and wearables to appliances and automotive systems. At the center of this transformation is Keyword Spotting (KWS), the task of detecting predefined wake words like “Hey Siri” or “OK Google” in continuous audio streams. Traditionally handled by cloud-based services or microcontrollers, keyword spotting is now migrating toward edge-based, hardware-accelerated implementations, offering major advantages in latency, power efficiency, and privacy.
 
-This post describes the design and tapeout of a CNN-based KWS accelerator ASIC, built entirely with open-source tools and submitted to the [Efabless AI-Generated Design Challenge](https://efabless.com/genai/challenges/4-winners). What distinguishes this project is the extensive use of Generative AI (ChatGPT-4o) in generating RTL, refining architectural decisions, and assisting with testbench development. The result is a modular, synthesizable KWS accelerator tailored for edge deployment-fully compatible with open-source ASIC toolchains such as OpenLane and SkyWater SKY130.
-</style>
+This post describes the design and tapeout of a CNN-based KWS accelerator ASIC, built entirely with open-source tools and submitted to the [Efabless AI-Generated Design Challenge][https://efabless.com/genai/challenges/4-winners]. What distinguishes this project is the extensive use of Generative AI (ChatGPT-4o) in generating RTL, refining architectural decisions, and assisting with testbench development. The result is a modular, synthesizable KWS accelerator tailored for edge deployment-fully compatible with open-source ASIC toolchains such as OpenLane and SkyWater SKY130.
+
 ## Keyword Spotting at the Edge
 
 Keyword spotting systems must operate in always-on, low-power modes while delivering high accuracy under variable acoustic environments. Cloud-based solutions introduce latency and privacy risks, while MCU-based implementations consume excessive energy for real-time wake-word detection.
 
-Commercial solutions like the [PIMIC Listen™ chip](https://www.pimic.ai/listen) and research innovations like the [ISSCC 2025 work by Lee et al.](https://ieeexplore.ieee.org/document/10904744) demonstrate what is possible when KWS is implemented in silicon. The Listen chip operates at 50µW and supports 32 keywords; meanwhile, the ISSCC 2025 KWS SoC achieves 92.2% accuracy on accented speech with on-chip training, consuming only 13.5µW.
+Commercial solutions like the [PIMIC Listen™ chip][https://www.pimic.ai/listen] and research innovations like the [ISSCC 2025 work by Lee et al.][https://ieeexplore.ieee.org/document/10904744] demonstrate what is possible when KWS is implemented in silicon. The Listen chip operates at 50µW and supports 32 keywords; meanwhile, the ISSCC 2025 KWS SoC achieves 92.2% accuracy on accented speech with on-chip training, consuming only 13.5µW.
 
 Our design follows this trajectory by introducing a low-power ASIC with modular Verilog infrastructure, tailored for CNN-based audio inference.
 
@@ -56,7 +56,7 @@ This AI-human co-design paradigm significantly reduced development time while in
 
 ## Inspired by State-of-the-Art Research
 
-The ISSCC 2025 paper “A 13.5µW 35-Keyword End-to-End Keyword Spotting System Featuring Personalized On-Chip Training” [Lee et al.](https://ieeexplore.ieee.org/document/10904744) introduces user-specific training using only three audio samples per keyword. In this paper, only the FC layer is updated on-chip to reduce memory and MAC overhead, enabling accent-resilient models with 92.2% accuracy and low training energy (13.46µW).
+The ISSCC 2025 paper “A 13.5µW 35-Keyword End-to-End Keyword Spotting System Featuring Personalized On-Chip Training” [Lee et al.][https://ieeexplore.ieee.org/document/10904744] introduces user-specific training using only three audio samples per keyword. In this paper, only the FC layer is updated on-chip to reduce memory and MAC overhead, enabling accent-resilient models with 92.2% accuracy and low training energy (13.46µW).
 
 This inspires several future directions for our work:
 
@@ -95,4 +95,4 @@ Post-silicon testing will use GPIO-injected signals on a DE10-Lite board with Py
 
 Keyword spotting at the edge is no longer a niche application-it is a core interface technology. As shown by the PIMIC Listen chip and ISSCC 2025 KWS SoC, ASICs are now leading the way in ultra-low power speech recognition. Our open-source CNN-based KWS accelerator demonstrates how generative AI can be harnessed to accelerate chip development, from prompt to silicon.
 
-Advancements in Generative AI, combined with open-source EDA tools like [OpenROAD](https://theopenroadproject.org/), are transforming ASIC design by reducing entry barriers, enabling rapid prototyping, and empowering a broader community of engineers to participate in cutting-edge silicon development.
+Advancements in Generative AI, combined with open-source EDA tools like [OpenROAD][https://theopenroadproject.org/], are transforming ASIC design by reducing entry barriers, enabling rapid prototyping, and empowering a broader community of engineers to participate in cutting-edge silicon development.
