@@ -1,4 +1,13 @@
 ---
+title: "Welcome to Jekyll!"
+date: 2019-04-18T15:34:30-04:00
+categories:
+  - blog
+tags:
+  - Jekyll
+  - update
+---
+<!-- ---
 title: "AI-Assisted ASIC Design for Keyword Spotting: Microarchitecture, Open-Source EDA, and Edge Intelligence"
 date: 2025-07-22T20:29:27-07:00
 categories:
@@ -12,7 +21,9 @@ tags:
   - Efabless
   - Keyword Spotting
   - Edge AI
----
+--- -->
+
+
 
 Voice interfaces are rapidly becoming the dominant method of interaction across a broad range of devices-from smart speakers and wearables to appliances and automotive systems. At the center of this transformation is Keyword Spotting (KWS), the task of detecting predefined wake words like “Hey Siri” or “OK Google” in continuous audio streams. Traditionally handled by cloud-based services or microcontrollers, keyword spotting is now migrating toward edge-based, hardware-accelerated implementations, offering major advantages in latency, power efficiency, and privacy.
 
