@@ -1,6 +1,6 @@
 ---
-title: "Custom Keyword Spotting ASIC Chip"
-date: 2025-07-22T20:29:27-07:00
+title: "Designing a Custom Keyword Spotting ASIC Chip Using Generative AI and Open Source EDA Tools"
+last_modified_at: 2025-07-22T20:29:27-07:00
 categories:
   - blog
 tags:
