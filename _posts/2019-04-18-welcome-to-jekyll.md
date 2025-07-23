@@ -1,5 +1,5 @@
 ---
-title: "AI-Assisted ASIC Design for Keyword Spotting: Microarchitecture, Open-Source EDA, and Edge Intelligence"
+title: "Designing a Custom Keyword Spotting ASIC Chip Using Generative AI and Open-Source EDA Tools"
 date: 2025-07-22T20:29:27-07:00
 categories:
   - blog
