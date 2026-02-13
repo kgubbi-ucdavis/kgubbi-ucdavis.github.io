@@ -1,7 +1,394 @@
----
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: home
-author_profile: true
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Immanuel Gubbi | PhD Candidate - Hardware Security & VLSI</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Kevin Immanuel Gubbi - PhD candidate in ECE at UC Davis specializing in hardware security, VLSI design, and ML for EDA.">
+    <meta name="keywords" content="hardware security, VLSI, EDA, machine learning, RTL verification, ASIC design, UC Davis">
+    <meta name="author" content="Kevin Immanuel Gubbi">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Kevin Immanuel Gubbi | PhD Candidate">
+    <meta property="og:description" content="Hardware Security, VLSI Design, ML for EDA">
+    <meta property="og:image" content="https://kgubbi-ucdavis.github.io/assets/images/kgubbi.png">
+    <meta property="og:url" content="https://kgubbi-ucdavis.github.io">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ====== Navigation ====== -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">KIG<span class="cursor">_</span></a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="blog/">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="nav-cta">CV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ====== Hero ====== -->
+    <section id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-greeting">Hi, I'm</p>
+                <h1 class="hero-name">Kevin Immanuel Gubbi</h1>
+                <div class="hero-tagline">
+                    <span id="typed-output"></span><span class="typed-cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    PhD candidate in ECE at UC Davis. I build secure hardware,
+                    verify chips with AI, and push the boundaries of ML-driven EDA.
+                </p>
+                <div class="hero-cta">
+                    <a href="#research" class="btn btn-primary">View Research</a>
+                    <a href="#contact" class="btn btn-outline">Get in Touch</a>
+                </div>
+                <div class="hero-social">
+                    <a href="https://www.linkedin.com/in/kevingubbi/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://scholar.google.com/citations?user=zAHMT24AAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                    <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:kgubbi@ucdavis.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-frame">
+                    <img src="assets/images/kgubbi.png" alt="Kevin Immanuel Gubbi">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== About ====== -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2><span class="gradient-text">About Me</span></h2>
+                <p>Researcher, engineer, and builder at the intersection of hardware security and AI</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-text fade-in">
+                    <p>
+                        I'm a PhD candidate in Electrical and Computer Engineering at UC Davis, specializing in hardware security, VLSI design, and machine learning for EDA. My research focuses on LLM-assisted RTL verification, hardware fuzzing, and secure ASIC design.
+                    </p>
+                    <p>
+                        I've interned at AMD and Samsung Austin Research Center (SARC), where I worked on ML/RL-based optimization for chip design and filed a patent. I also lead award-winning research teams and contribute to hardware security initiatives.
+                    </p>
+                    <div class="interest-tags">
+                        <span class="tag">Hardware Security</span>
+                        <span class="tag">VLSI Design</span>
+                        <span class="tag">ML for EDA</span>
+                        <span class="tag">LLM-Assisted Verification</span>
+                        <span class="tag">Hardware Fuzzing</span>
+                        <span class="tag">Secure ASIC Design</span>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <div class="highlight-cards">
+                        <div class="highlight-card">
+                            <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <h4>PhD Candidate</h4>
+                            <p>UC Davis ECE</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="card-icon"><i class="fas fa-file-contract"></i></div>
+                            <h4>Patent Filed</h4>
+                            <p>Samsung SARC</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="card-icon"><i class="fas fa-trophy"></i></div>
+                            <h4>3x Winner</h4>
+                            <p>DAC Competitions</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="card-icon"><i class="fas fa-building"></i></div>
+                            <h4>Industry Intern</h4>
+                            <p>AMD & Samsung</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== Research & Projects ====== -->
+    <section id="research" class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2><span class="gradient-text">Research & Projects</span></h2>
+                <p>Exploring the frontiers of hardware security, chip design, and AI-driven EDA</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="card-icon"><i class="fas fa-shield-halved"></i></div>
+                    <h3>LLM-Assisted RTL Verification</h3>
+                    <p>Using large language models to automate security-focused testbench generation and vulnerability confirmation in hardware designs.</p>
+                    <div class="card-tags">
+                        <span class="tag">LLM</span>
+                        <span class="tag">RTL</span>
+                        <span class="tag">Security</span>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="card-icon"><i class="fas fa-bug"></i></div>
+                    <h3>Hardware Fuzzing for SoC Security</h3>
+                    <p>Developing fuzzing techniques to discover security vulnerabilities in System-on-Chip designs at the pre-silicon stage.</p>
+                    <div class="card-tags">
+                        <span class="tag">Fuzzing</span>
+                        <span class="tag">SoC</span>
+                        <span class="tag">Pre-Silicon</span>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="card-icon"><i class="fas fa-microchip"></i></div>
+                    <h3>CNN-based KWS ASIC Tapeout</h3>
+                    <p>Designed a CNN-based Keyword Spotting accelerator using generative AI and open-source EDA tools, fabricated via Efabless on SKY130.</p>
+                    <div class="card-tags">
+                        <span class="tag">ASIC</span>
+                        <span class="tag">GenAI</span>
+                        <span class="tag">OpenLane</span>
+                    </div>
+                    <a href="blog/kws-asic-chip-tapeout.html" class="card-link">Read more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="card-icon"><i class="fas fa-brain"></i></div>
+                    <h3>ML/RL Optimization for Chip Design</h3>
+                    <p>Applied machine learning and reinforcement learning techniques to optimize chip design workflows during internship at Samsung SARC.</p>
+                    <div class="card-tags">
+                        <span class="tag">ML</span>
+                        <span class="tag">RL</span>
+                        <span class="tag">EDA</span>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="card-icon"><i class="fas fa-robot"></i></div>
+                    <h3>On-Device SLMs for RTL Debugging</h3>
+                    <p>Won 1st place at ICLAD-DAC 2025 SLM track using small language models on-device for RTL debugging, synthesis, and testbench generation.</p>
+                    <div class="card-tags">
+                        <span class="tag">SLM</span>
+                        <span class="tag">Edge AI</span>
+                        <span class="tag">RTL</span>
+                    </div>
+                    <a href="blog/slm-challenge-dac-2025.html" class="card-link">Read more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== Publications ====== -->
+    <section id="publications" class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2><span class="gradient-text">Publications</span></h2>
+                <p>Selected research publications and conference papers</p>
+            </div>
+            <div class="pub-list">
+                <div class="pub-entry fade-in">
+                    <div class="pub-year">2025</div>
+                    <div class="pub-details">
+                        <h4 class="pub-title">[Paper Title Placeholder 1]</h4>
+                        <p class="pub-authors"><strong>K. I. Gubbi</strong>, Co-Author 1, Co-Author 2</p>
+                        <p class="pub-venue">Conference/Journal Name, 2025</p>
+                        <div class="pub-links">
+                            <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                            <a href="#" class="pub-link"><i class="fas fa-code"></i> Code</a>
+                            <a href="#" class="pub-link"><i class="fas fa-quote-left"></i> Cite</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pub-entry fade-in">
+                    <div class="pub-year">2025</div>
+                    <div class="pub-details">
+                        <h4 class="pub-title">[Paper Title Placeholder 2]</h4>
+                        <p class="pub-authors"><strong>K. I. Gubbi</strong>, Co-Author 1, Co-Author 2</p>
+                        <p class="pub-venue">Conference/Journal Name, 2025</p>
+                        <div class="pub-links">
+                            <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                            <a href="#" class="pub-link"><i class="fas fa-quote-left"></i> Cite</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pub-entry fade-in">
+                    <div class="pub-year">2024</div>
+                    <div class="pub-details">
+                        <h4 class="pub-title">[Paper Title Placeholder 3]</h4>
+                        <p class="pub-authors"><strong>K. I. Gubbi</strong>, Co-Author 1, Co-Author 2, Co-Author 3</p>
+                        <p class="pub-venue">Conference/Journal Name, 2024</p>
+                        <div class="pub-links">
+                            <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                            <a href="#" class="pub-link"><i class="fas fa-code"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pub-scholar fade-in">
+                <a href="https://scholar.google.com/citations?user=zAHMT24AAAAJ&hl=en" target="_blank" rel="noopener" class="btn btn-outline">
+                    <i class="fas fa-graduation-cap"></i> View All on Google Scholar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== Experience ====== -->
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2><span class="gradient-text">Experience</span></h2>
+                <p>Industry and academic experience in chip design and hardware security</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h4>Samsung Austin Research Center (SARC)</h4>
+                            <span class="timeline-date">Summer 20XX</span>
+                        </div>
+                        <p class="timeline-role">Research Intern</p>
+                        <p class="timeline-desc">Worked on ML/RL-based optimization for chip design. Filed a patent on novel optimization techniques for EDA workflows.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">ML</span>
+                            <span class="tag">RL</span>
+                            <span class="tag">EDA</span>
+                            <span class="tag">Patent</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h4>AMD</h4>
+                            <span class="timeline-date">Summer 20XX</span>
+                        </div>
+                        <p class="timeline-role">Intern</p>
+                        <p class="timeline-desc">Contributed to hardware design and verification workflows at one of the world's leading semiconductor companies.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">VLSI</span>
+                            <span class="tag">Verification</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h4>UC Davis</h4>
+                            <span class="timeline-date">20XX &ndash; Present</span>
+                        </div>
+                        <p class="timeline-role">Graduate Research Assistant</p>
+                        <p class="timeline-desc">Conducting research in hardware security, LLM-assisted RTL verification, and hardware fuzzing under the ECE department.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Hardware Security</span>
+                            <span class="tag">Research</span>
+                            <span class="tag">LLM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== Blog Teaser ====== -->
+    <section id="blog" class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2><span class="gradient-text">Recent Posts</span></h2>
+                <p>Thoughts on hardware design, security research, and competitions</p>
+            </div>
+            <div class="blog-grid">
+                <div class="blog-card fade-in">
+                    <span class="blog-card-date">July 24, 2025</span>
+                    <h3><a href="blog/kws-asic-chip-tapeout.html">Designing a Custom Keyword Spotting ASIC Chip Using Generative AI and Open Source EDA Tools</a></h3>
+                    <p>Voice interfaces are rapidly becoming the dominant method of interaction. This post describes the design and tapeout of a CNN-based KWS accelerator ASIC.</p>
+                    <div class="card-tags">
+                        <span class="tag">ASIC</span>
+                        <span class="tag">GenAI</span>
+                        <span class="tag">Efabless</span>
+                    </div>
+                </div>
+                <div class="blog-card fade-in">
+                    <span class="blog-card-date">July 24, 2025</span>
+                    <h3><a href="blog/hack-at-dac-2025.html">AI-Augmented Pre-Silicon Hardware SoC Security Verification: Hack@DAC 2025</a></h3>
+                    <p>Our team won 3rd place at Hack@DAC 2025 by developing a semi-automated framework combining commercial EDA tools with AI agents for RTL security.</p>
+                    <div class="card-tags">
+                        <span class="tag">Hardware Security</span>
+                        <span class="tag">Hack@DAC</span>
+                    </div>
+                </div>
+                <div class="blog-card fade-in">
+                    <span class="blog-card-date">July 24, 2025</span>
+                    <h3><a href="blog/slm-challenge-dac-2025.html">Winning the SLM Track at the ICLAD-DAC 2025 GenAI Chip Hackathon</a></h3>
+                    <p>Won 1st place in the SLM Track using on-device small language models for RTL debugging, logic synthesis, and testbench generation.</p>
+                    <div class="card-tags">
+                        <span class="tag">SLM</span>
+                        <span class="tag">Hackathon</span>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-view-all fade-in">
+                <a href="blog/" class="btn btn-outline">View All Posts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== Contact ====== -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2><span class="gradient-text">Get in Touch</span></h2>
+                <p>Interested in collaboration, research discussions, or opportunities?</p>
+            </div>
+            <div class="contact-grid fade-in">
+                <a href="mailto:kgubbi@ucdavis.edu" class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <span>kgubbi@ucdavis.edu</span>
+                </a>
+                <a href="https://www.linkedin.com/in/kevingubbi/" target="_blank" rel="noopener" class="contact-card">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://scholar.google.com/citations?user=zAHMT24AAAAJ&hl=en" target="_blank" rel="noopener" class="contact-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Google Scholar</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== Footer ====== -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Kevin Immanuel Gubbi</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/kevingubbi/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://scholar.google.com/citations?user=zAHMT24AAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
+                <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

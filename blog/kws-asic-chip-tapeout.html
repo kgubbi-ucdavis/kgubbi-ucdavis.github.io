@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designing a Custom KWS ASIC Chip | Kevin Immanuel Gubbi</title>
+
+    <meta name="description" content="Design and tapeout of a CNN-based Keyword Spotting accelerator ASIC using generative AI and open-source EDA tools like OpenLane and SkyWater SKY130.">
+    <meta name="author" content="Kevin Immanuel Gubbi">
+
+    <meta property="og:title" content="Designing a Custom Keyword Spotting ASIC Chip Using Generative AI">
+    <meta property="og:description" content="CNN-based KWS accelerator ASIC built with open-source tools and submitted to the Efabless AI-Generated Design Challenge.">
+    <meta property="og:url" content="https://kgubbi-ucdavis.github.io/blog/kws-asic-chip-tapeout.html">
+    <meta property="og:type" content="article">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- ====== Navigation ====== -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="../" class="nav-logo">KIG<span class="cursor">_</span></a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="../#about">About</a></li>
+                <li><a href="../#research">Research</a></li>
+                <li><a href="../#publications">Publications</a></li>
+                <li><a href="../#experience">Experience</a></li>
+                <li><a href="./">Blog</a></li>
+                <li><a href="../#contact">Contact</a></li>
+                <li><a href="#" class="nav-cta">CV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ====== Blog Post ====== -->
+    <article class="blog-post">
+        <header class="post-header">
+            <div class="post-meta">
+                <time datetime="2025-07-24">July 24, 2025</time>
+                <div class="post-tags">
+                    <span class="tag">ASIC</span>
+                    <span class="tag">Chip Design</span>
+                    <span class="tag">Generative AI</span>
+                    <span class="tag">OpenLane</span>
+                    <span class="tag">Efabless</span>
+                    <span class="tag">Edge AI</span>
+                </div>
+            </div>
+            <h1>Designing a Custom Keyword Spotting ASIC Chip Using Generative AI and Open Source EDA Tools</h1>
+        </header>
+
+        <div class="post-content">
+            <p>Voice interfaces are rapidly becoming the dominant method of interaction across a broad range of devices&mdash;from smart speakers and wearables to appliances and automotive systems. At the center of this transformation is Keyword Spotting (KWS), the task of detecting predefined wake words like &ldquo;Hey Siri&rdquo; or &ldquo;OK Google&rdquo; in continuous audio streams. Traditionally handled by cloud-based services or microcontrollers, keyword spotting is now migrating toward edge-based, hardware-accelerated implementations, offering major advantages in latency, power efficiency, and privacy.</p>
+
+            <p>This post describes the design and tapeout of a CNN-based KWS accelerator ASIC, built entirely with open-source tools and submitted to the <a href="https://efabless.com/genai/challenges/4-winners">Efabless AI-Generated Design Challenge</a>. What distinguishes this project is the extensive use of Generative AI (ChatGPT-4o) in generating RTL, refining architectural decisions, and assisting with testbench development. The result is a modular, synthesizable KWS accelerator tailored for edge deployment&mdash;fully compatible with open-source ASIC toolchains such as OpenLane and SkyWater SKY130.</p>
+
+            <h2>Keyword Spotting at the Edge</h2>
+
+            <p>Keyword spotting systems must operate in always-on, low-power modes while delivering high accuracy under variable acoustic environments. Cloud-based solutions introduce latency and privacy risks, while MCU-based implementations consume excessive energy for real-time wake-word detection.</p>
+
+            <p>Commercial solutions like the <a href="https://www.pimic.ai/listen">PIMIC Listen&trade; chip</a> and research innovations like the <a href="https://ieeexplore.ieee.org/document/10904744">ISSCC 2025 work by Lee et al.</a> demonstrate what is possible when KWS is implemented in silicon. The Listen chip operates at 50&micro;W and supports 32 keywords; meanwhile, the ISSCC 2025 KWS SoC achieves 92.2% accuracy on accented speech with on-chip training, consuming only 13.5&micro;W.</p>
+
+            <p>Our design follows this trajectory by introducing a low-power ASIC with modular Verilog infrastructure, tailored for CNN-based audio inference.</p>
+
+            <h2>Project Overview</h2>
+
+            <p>The architecture consists of:</p>
+
+            <ul>
+                <li>Weight and Line Buffers for audio input and parameter storage</li>
+                <li>MAC Array and Adder Tree for convolution and reduction</li>
+                <li>ReLU and Pooling units for activation and downsampling</li>
+                <li>FSM-based control for sequencing operations</li>
+                <li>Integration into Caravel&rsquo;s user_project_wrapper with Wishbone interface</li>
+            </ul>
+
+            <p>The system is written in Verilog, validated with SystemVerilog testbenches, and synthesized via OpenLane for SKY130.</p>
+
+            <h2>Generative AI in RTL Design</h2>
+
+            <p>ChatGPT-4o supported:</p>
+
+            <ul>
+                <li>Module generation (MACs, ReLU, pooling, FSM)</li>
+                <li>Prompt-guided testbench development</li>
+                <li>Architecture exploration (pipeline scheduling, buffer reuse)</li>
+                <li>Bug diagnosis and synthesis improvement</li>
+            </ul>
+
+            <p>This AI-human co-design paradigm significantly reduced development time while increasing modularity and reproducibility.</p>
+
+            <h2>Inspired by State-of-the-Art Research</h2>
+
+            <p>The ISSCC 2025 paper &ldquo;A 13.5&micro;W 35-Keyword End-to-End Keyword Spotting System Featuring Personalized On-Chip Training&rdquo; <a href="https://ieeexplore.ieee.org/document/10904744">Lee et al.</a> introduces user-specific training using only three audio samples per keyword. In this paper, only the FC layer is updated on-chip to reduce memory and MAC overhead, enabling accent-resilient models with 92.2% accuracy and low training energy (13.46&micro;W).</p>
+
+            <p>This inspires several future directions for our work:</p>
+
+            <ul>
+                <li>Adding on-chip training for personalization</li>
+                <li>Exploring sinc-convolution FEs for embedded MFCC extraction</li>
+                <li>Compressing CNNs using depthwise separable layers and pruning</li>
+            </ul>
+
+            <p>Our goal is to approach the flexibility and efficiency demonstrated in this work while leveraging open-source tools and generative co-design methodologies.</p>
+
+            <h2>Why Not Microcontrollers?</h2>
+
+            <p>MCU-based KWS systems:</p>
+
+            <ul>
+                <li>Require full CPU wakeup for every inference</li>
+                <li>Struggle with deterministic timing and power constraints</li>
+                <li>Cannot offer hardware-level parallelism for convolution or softmax</li>
+                <li>Rely on firmware and floating-point emulation for training</li>
+            </ul>
+
+            <p>Dedicated silicon outperforms in every aspect: latency, power, area, and robustness&mdash;especially for always-on workloads.</p>
+
+            <h2>Verification and Fabrication</h2>
+
+            <p>All RTL was verified with AI-assisted SystemVerilog testbenches and waveform analysis using VCS. The design passed tapeout precheck and was fabricated via Efabless&rsquo; CI-2406 shuttle.</p>
+
+            <p>Post-silicon testing will use GPIO-injected signals on a DE10-Lite board with Python-based data validation.</p>
+
+            <h2>Future Work</h2>
+
+            <ul>
+                <li>Add MFCC pipeline (fixed-point FFT and Mel filterbanks)</li>
+                <li>Support multiple classes with DS-CNN topology</li>
+                <li>Benchmark power, latency, and area vs. Listen and ISSCC SoCs</li>
+                <li>Train with accented datasets (GSCD) and explore gradient quantization</li>
+                <li>Embed a trainable FC layer for end-user adaptation</li>
+            </ul>
+
+            <h2>Conclusion</h2>
+
+            <p>Keyword spotting at the edge is no longer a niche application&mdash;it is a core interface technology. As shown by the PIMIC Listen chip and ISSCC 2025 KWS SoC, ASICs are now leading the way in ultra-low power speech recognition. Our open-source CNN-based KWS accelerator demonstrates how generative AI can be harnessed to accelerate chip development, from prompt to silicon.</p>
+
+            <p>Advancements in Generative AI, combined with open-source EDA tools like <a href="https://theopenroadproject.org/">OpenROAD</a>, are transforming ASIC design by reducing entry barriers, enabling rapid prototyping, and empowering a broader community of engineers to participate in cutting-edge silicon development.</p>
+        </div>
+
+        <nav class="post-nav">
+            <a href="hack-at-dac-2025.html">Next: Hack@DAC 2025 &rarr;</a>
+        </nav>
+    </article>
+
+    <!-- ====== Footer ====== -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Kevin Immanuel Gubbi</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/kevingubbi/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://scholar.google.com/citations?user=zAHMT24AAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
+                <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

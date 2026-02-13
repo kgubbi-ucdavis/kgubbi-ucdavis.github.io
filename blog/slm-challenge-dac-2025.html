@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLM Challenge DAC 2025 | Kevin Immanuel Gubbi</title>
+
+    <meta name="description" content="1st place in the SLM Track at the ICLAD-DAC 2025 GenAI Chip Hackathon — using on-device small language models for RTL debugging and synthesis.">
+    <meta name="author" content="Kevin Immanuel Gubbi">
+
+    <meta property="og:title" content="Winning the SLM Track at the ICLAD-DAC 2025 GenAI Chip Hackathon">
+    <meta property="og:description" content="1st place in the SLM Track using on-device small language models for chip design automation.">
+    <meta property="og:url" content="https://kgubbi-ucdavis.github.io/blog/slm-challenge-dac-2025.html">
+    <meta property="og:type" content="article">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- ====== Navigation ====== -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="../" class="nav-logo">KIG<span class="cursor">_</span></a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="../#about">About</a></li>
+                <li><a href="../#research">Research</a></li>
+                <li><a href="../#publications">Publications</a></li>
+                <li><a href="../#experience">Experience</a></li>
+                <li><a href="./">Blog</a></li>
+                <li><a href="../#contact">Contact</a></li>
+                <li><a href="#" class="nav-cta">CV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ====== Blog Post ====== -->
+    <article class="blog-post">
+        <header class="post-header">
+            <div class="post-meta">
+                <time datetime="2025-07-24">July 24, 2025</time>
+                <div class="post-tags">
+                    <span class="tag">ICLAD</span>
+                    <span class="tag">Hackathon</span>
+                    <span class="tag">SLM</span>
+                    <span class="tag">Generative AI</span>
+                    <span class="tag">RTL</span>
+                    <span class="tag">EDA</span>
+                </div>
+            </div>
+            <h1>Winning the SLM Track at the ICLAD-DAC 2025 GenAI Chip Hackathon</h1>
+        </header>
+
+        <div class="post-content">
+            <h2>ICLAD-DAC 2025 GenAI Chip Hackathon &ndash; SLM Track Winner</h2>
+
+            <p><strong>Event:</strong> ICLAD Hackathon @ DAC 2025<br>
+            <strong>Track:</strong> Small Language Model (SLM) Challenge<br>
+            <strong>Award:</strong> 1st Place, SLM Track<br>
+            <strong>Team:</strong> Kevin Immanuel Gubbi (Team Lead), Pavan Kota, Jiheng Li</p>
+
+            <hr>
+
+            <h3>Overview</h3>
+
+            <p>The ICLAD-DAC 2025 GenAI Hackathon was a one-day, hands-on competition co-located with the Design Automation Conference (DAC). The event brought together teams to explore the capabilities of generative AI for chip design automation. It featured two tracks:</p>
+
+            <ul>
+                <li><strong>Open Challenge:</strong> Using cloud-based large language models (LLMs)</li>
+                <li><strong>SLM Challenge:</strong> Using small language models directly on Qualcomm X-Elite laptops</li>
+            </ul>
+
+            <hr>
+
+            <h3>Our Focus</h3>
+
+            <p>Our team competed in the <strong>SLM Challenge</strong>, targeting problems in RTL debugging, logic synthesis, and testbench generation. With no access to cloud compute, we optimized our solution pipeline to run fully on-device using resource-efficient open-source SLMs such as <strong>Qwen-2.5-Instruct-Verilog</strong> and <strong>TinyLlama</strong>.</p>
+
+            <hr>
+
+            <h3>Technical Contributions</h3>
+
+            <ul>
+                <li>Designed prompt strategies optimized for small models under strict latency constraints</li>
+                <li>Developed Python wrappers and toolchains to interface SLM output with real-world EDA tools</li>
+                <li>Successfully addressed challenges across multiple categories:
+                    <ul>
+                        <li><strong>Spec2Tapeout (ASU)</strong></li>
+                        <li><strong>Design Verification (Google)</strong></li>
+                        <li><strong>Logic Synthesis (Qualcomm)</strong></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <p>Our methods focused on practical GenAI integration: solving chip design problems without relying on heavy compute or expensive APIs, making hardware design more accessible and local.</p>
+
+            <hr>
+
+            <h3>Why It Mattered</h3>
+
+            <p>Winning the SLM track demonstrated the real-world feasibility of using smaller task-specific small language models (SLMs) for chip design on edge devices. Our approach proved that even lightweight models can significantly assist in RTL verification and synthesis automation, making chip design workflows more scalable and democratized.</p>
+
+            <hr>
+
+            <h3>Resources</h3>
+
+            <p><a href="https://github.com/ICLAD-Hackathon/ICLAD-Hackathon-2025">GenAI Chip Hackathon GitHub Site</a></p>
+
+            <hr>
+
+            <p>Stay tuned for a deeper technical write-up on our solutions and pipelines.</p>
+        </div>
+
+        <nav class="post-nav">
+            <a href="hack-at-dac-2025.html">&larr; Previous: Hack@DAC 2025</a>
+        </nav>
+    </article>
+
+    <!-- ====== Footer ====== -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Kevin Immanuel Gubbi</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/kevingubbi/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://scholar.google.com/citations?user=zAHMT24AAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
+                <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
