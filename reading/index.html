@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Reads | Kevin Immanuel Gubbi</title>
+
+    <!-- SEO -->
+    <meta name="description" content="A curated collection of papers, essays, lectures, and courses across AI, agents, AI for science, neuroscience, computer architecture, chip design, hardware security, research, and entrepreneurship.">
+    <meta name="author" content="Kevin Immanuel Gubbi">
+    <link rel="canonical" href="https://kgubbi-ucdavis.github.io/reading/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Good Reads | Kevin Immanuel Gubbi">
+    <meta property="og:description" content="Papers, essays, lectures, and ideas worth exploring across AI, computing, neuroscience, security, research, and entrepreneurship.">
+    <meta property="og:image" content="https://kgubbi-ucdavis.github.io/assets/images/kgubbi.png">
+    <meta property="og:url" content="https://kgubbi-ucdavis.github.io/reading/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Good Reads | Kevin Immanuel Gubbi">
+    <meta name="twitter:description" content="Papers, essays, lectures, and ideas worth exploring.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="reading.css">
+</head>
+<body class="reading-page">
+
+    <a class="gr-skip" href="#main">Skip to content</a>
+
+    <!-- ====== Navigation ====== -->
+    <nav id="navbar" aria-label="Main">
+        <div class="nav-container">
+            <a href="../" class="nav-logo">KIG<span class="cursor">_</span></a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="../#about">About</a></li>
+                <li><a href="../#research">Research</a></li>
+                <li><a href="../#publications">Publications</a></li>
+                <li><a href="../#experience">Experience</a></li>
+                <li><a href="../blog/">Blog</a></li>
+                <li><a href="./" class="active" aria-current="page">Good Reads</a></li>
+                <li><a href="../#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main">
+
+        <!-- ====== Hero ====== -->
+        <header class="gr-hero">
+            <div class="container">
+                <p class="gr-eyebrow">~/reading</p>
+                <h1 class="gr-title"><span class="gradient-text">Good Reads.</span></h1>
+                <p class="gr-subtitle">Papers, essays, lectures, and ideas worth exploring.</p>
+                <p class="gr-lede">
+                    A growing collection of interesting work across AI, computing, neuroscience,
+                    security, research, and entrepreneurship. Some of it is foundational, some more
+                    recent. Follow whatever catches your curiosity.
+                </p>
+                <p class="gr-note">
+                    Not a ranking or an exhaustive bibliography. Just a collection of ideas worth spending time with.
+                </p>
+                <p class="gr-hero-meta">
+                    <span><span id="gr-total">92</span> entries</span>
+                    <span aria-hidden="true">·</span>
+                    <span>Last curated <span id="gr-updated">October 2026</span></span>
+                </p>
+                <nav class="gr-toc" aria-label="On this page">
+                    <a href="#start">Where to begin</a>
+                    <a href="#library">Library</a>
+                    <a href="#people">People</a>
+                    <a href="#how-to-read">How to read a paper</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- ====== Where to begin ====== -->
+        <section id="start" class="gr-section" aria-labelledby="start-title">
+            <div class="container">
+                <div class="gr-section-head">
+                    <p class="gr-eyebrow">01</p>
+                    <h2 id="start-title">Where to begin</h2>
+                    <p>Four short sequences, each a handful of readings in a sensible order. Pick one and start at the top.</p>
+                </div>
+                <div class="gr-paths" id="gr-paths"></div>
+            </div>
+        </section>
+
+        <!-- ====== Library ====== -->
+        <section id="library" class="gr-section gr-library" aria-labelledby="library-title">
+            <div class="container">
+                <div class="gr-section-head">
+                    <p class="gr-eyebrow">02</p>
+                    <h2 id="library-title">The library</h2>
+                    <p>Each entry links to the original paper, publisher, or author-hosted source. Years refer to the version linked; preprint dates are noted where they differ.</p>
+                </div>
+
+                <div class="gr-controls">
+                    <div class="gr-search">
+                        <label for="gr-search" class="gr-visually-hidden">Search the reading library</label>
+                        <svg class="gr-search-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+                            <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <input type="search" id="gr-search" placeholder="Search papers, authors, topics..."
+                               autocomplete="off" spellcheck="false" aria-describedby="gr-count gr-search-hint">
+                        <kbd class="gr-search-hint" id="gr-search-hint" aria-label="Press slash to focus search">/</kbd>
+                    </div>
+                    <div class="gr-chips" id="gr-chips" role="group" aria-label="Filter by category"></div>
+                    <p class="gr-count" id="gr-count" aria-live="polite" aria-atomic="true"></p>
+                </div>
+
+                <div id="gr-groups"></div>
+
+                <div class="gr-empty" id="gr-empty" hidden>
+                    <p id="gr-empty-text">Nothing matches.</p>
+                    <p>Try a broader term, an author's surname, or a topic such as <em>attention</em>, <em>placement</em>, or <em>side channel</em>.</p>
+                    <button type="button" class="btn btn-outline" id="gr-reset">Clear search and filters</button>
+                </div>
+
+                <noscript>
+                    <p class="gr-empty">The library is rendered with JavaScript. The full catalog is also readable as plain data in <a href="resources.js">resources.js</a>.</p>
+                </noscript>
+            </div>
+        </section>
+
+        <!-- ====== People ====== -->
+        <section id="people" class="gr-section" aria-labelledby="people-title">
+            <div class="container">
+                <div class="gr-section-head">
+                    <p class="gr-eyebrow">03</p>
+                    <h2 id="people-title">People worth learning from</h2>
+                    <p>Researchers, engineers, and builders whose original work is worth reading directly. Not a ranking; links go to their own writing or papers.</p>
+                </div>
+                <div class="gr-people" id="gr-people"></div>
+            </div>
+        </section>
+
+        <!-- ====== How to read research ====== -->
+        <section id="how-to-read" class="gr-section" aria-labelledby="how-title">
+            <div class="container">
+                <div class="gr-section-head">
+                    <p class="gr-eyebrow">04</p>
+                    <h2 id="how-title">How to read a research paper</h2>
+                    <p>You rarely need to read a paper front to back on the first pass. Read the abstract, figures, and conclusion, then try to answer four questions.</p>
+                </div>
+                <ol class="gr-questions">
+                    <li>
+                        <h3>What problem is the paper solving?</h3>
+                        <p>State it in one sentence, in your own words. Ask why it matters and why earlier approaches were not good enough.</p>
+                    </li>
+                    <li>
+                        <h3>What was the important new idea?</h3>
+                        <p>Most papers have one central idea surrounded by engineering. Find it, and ask whether it is a new method, a new measurement, or a new way of framing the problem.</p>
+                    </li>
+                    <li>
+                        <h3>What evidence supports the result?</h3>
+                        <p>Look at the baselines, datasets, and ablations. Check whether the comparison is fair, whether the gains exceed run-to-run noise, and whether anyone has reproduced it.</p>
+                    </li>
+                    <li>
+                        <h3>What assumptions, limitations, or open questions remain?</h3>
+                        <p>Every result holds under conditions. Note what the authors assumed, where the method fails, and what you would try next. This is often where your own research starts.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ====== Footer ====== -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 Kevin Immanuel Gubbi</p>
+            <div class="footer-links">
+                <a href="../">Home</a>
+                <a href="../blog/">Blog</a>
+                <a href="https://github.com/kgubbi-ucdavis" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://scholar.google.com/citations?user=zAHMT24AAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
+                <a href="https://www.linkedin.com/in/kevingubbi/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="resources.js"></script>
+    <script src="reading.js"></script>
+</body>
+</html>

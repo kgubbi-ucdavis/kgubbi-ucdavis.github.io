@@ -39,10 +39,10 @@ const typedOutput = document.getElementById('typed-output');
 
 if (typedOutput) {
     const phrases = [
+        'Co-Founder & CTO, ChipSage Labs',
         'Hardware Security Researcher',
-        'VLSI Design Engineer',
-        'ML for EDA',
-        'Award-Winning Team Lead'
+        'AI for Chip Design',
+        'VLSI & Computer Architecture'
     ];
 
     let phraseIndex = 0;

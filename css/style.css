@@ -195,6 +195,7 @@ p {
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
+    white-space: nowrap;
 }
 
 .nav-links a:hover,
@@ -698,6 +699,15 @@ p {
     margin-top: 40px;
 }
 
+.pub-note {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
 /* ================================================
    9. Experience Timeline
    ================================================ */
@@ -856,6 +866,38 @@ p {
 .blog-view-all {
     text-align: center;
     margin-top: 40px;
+}
+
+/* Good Reads teaser */
+.reading-teaser {
+    padding-top: 0;
+}
+
+.reading-teaser-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 32px 36px;
+}
+
+.reading-teaser-inner h2 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.reading-teaser-inner p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    max-width: 560px;
+}
+
+.reading-teaser-inner .card-link {
+    flex-shrink: 0;
 }
 
 /* ================================================
@@ -1229,6 +1271,10 @@ footer {
 /* ================================================
    17. Responsive Styles
    ================================================ */
+@media (min-width: 769px) and (max-width: 960px) {
+    .nav-links { gap: 20px; }
+}
+
 @media (max-width: 768px) {
     h1 { font-size: 2rem; }
     h2 { font-size: 1.6rem; }
@@ -1325,6 +1371,14 @@ footer {
         font-size: 1.7rem;
     }
 
+    /* Good Reads teaser */
+    .reading-teaser-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 24px;
+    }
+
     /* Contact */
     .contact-grid {
         grid-template-columns: 1fr;
@@ -1340,6 +1394,8 @@ footer {
 
 @media (max-width: 480px) {
     .hero-name { font-size: 1.8rem; }
+
+    .hero-tagline { font-size: 0.95rem; }
 
     .hero-cta {
         flex-direction: column;
@@ -1358,4 +1414,9 @@ footer {
         width: 180px;
         height: 180px;
     }
+}
+
+@media (max-width: 360px) {
+    /* Reserve two lines so longer typed phrases don't shift the layout */
+    .hero-tagline { min-height: 3.4em; }
 }
